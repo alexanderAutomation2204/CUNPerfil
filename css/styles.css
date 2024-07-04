@@ -1,0 +1,201 @@
+/* Variables CSS */
+:root {
+    --primary-color: #400196; /* Color principal para header, nav y footer */
+    --secondary-color: #FFFFFF; /* Color secundario para el fondo y el texto */
+    --accent-color: #FF6F61; /* Color de acento para botones y enlaces */
+    --background-color: #F0F0F5; /* Color de fondo general */
+    --heading-font: 'Poppins', sans-serif; /* Fuente para encabezados */
+    --body-font: 'Roboto', sans-serif; /* Fuente para el cuerpo del texto */
+    --border-radius: 10px; /* Radio de borde para contenedores y elementos */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para contenedores */
+}
+
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap'); /* Importar fuentes desde Google Fonts */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Aplicar box-sizing a todos los elementos */
+}
+
+/* Estilo del cuerpo de la página */
+body {
+    font-family: var(--body-font); /* Fuente del cuerpo del texto */
+    line-height: 1.6; /* Altura de línea */
+    background-color: var(--background-color); /* Color de fondo general */
+    color: var(--primary-color); /* Color del texto */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilo del encabezado */
+header {
+    background: var(--primary-color); /* Color de fondo del header */
+    color: var(--secondary-color); /* Color del texto del header */
+    padding: 2em 0; /* Padding superior e inferior */
+    text-align: center; /* Alinear el texto al centro */
+    font-family: var(--heading-font); /* Fuente del header */
+    font-size: 2em; /* Tamaño de la fuente del header */
+    box-shadow: var(--box-shadow); /* Sombra del header */
+    background-image: url('../Imagenes/perfil.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    /*margin-bottom: 3em; /* Añadir espacio debajo del header */
+}
+
+/* Estilo de la navegación fija */
+nav {
+    background: var(--primary-color); /* Color de fondo de la navegación */
+    box-shadow: var(--box-shadow); /* Sombra para darle efecto */
+}
+
+nav.sticky {
+    position: fixed; /* Fija la navegación en la parte superior */
+    top: 0; /* Posiciona la navegación en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que la navegación esté por encima de otros elementos */
+}
+
+
+/* Estilo de la navegación */
+nav ul {
+    list-style: none; /* Eliminar viñetas de la lista */
+    padding: 1em; /* Padding alrededor de la lista */
+    text-align: center; /* Alinear el texto al centro */
+    background: var(--primary-color); /* Color de fondo de la navegación */
+}
+
+nav ul li {
+    display: inline; /* Mostrar los elementos de la lista en línea */
+    margin: 0 1.5em; /* Márgenes entre los elementos de la lista */
+}
+
+nav ul li a {
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    color: var(--secondary-color); /* Color del texto de los enlaces */
+    font-family: var(--heading-font); /* Fuente de los enlaces */
+    transition: color 0.3s ease; /* Transición de color para hover */
+}
+
+nav ul li a:hover {
+    color: var(--accent-color); /* Color del enlace al pasar el cursor */
+}
+
+/* Estilo del contenido principal */
+main {
+    padding: 3em 2em; /* Padding del contenido principal */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    align-items: center; /* Alinear los elementos al centro */
+}
+
+/* Estilo de las secciones */
+section {
+    margin-bottom: 2em; /* Margen inferior de las secciones */
+    background: var(--secondary-color); /* Color de fondo de las secciones */
+    padding: 2em; /* Padding de las secciones */
+    border-radius: var(--border-radius); /* Bordes redondeados de las secciones */
+    box-shadow: var(--box-shadow); /* Sombra de las secciones */
+    width: 100%; /* Ancho del 100% */
+    max-width: 800px; /* Ancho máximo */
+}
+
+section p {
+    margin-bottom: 1em; /* Espacio entre párrafos */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    font-size: 1.1em; /* Tamaño de fuente ligeramente mayor */
+    color: #333; /* Color del texto */
+    text-align: justify; /* Justificar el texto */
+}
+
+
+/* Estilo de los encabezados de sección */
+h2 {
+    font-family: var(--heading-font); /* Fuente de los encabezados de sección */
+    font-size: 1.8em; /* Tamaño de la fuente de los encabezados de sección */
+    margin-bottom: 1em; /* Margen inferior de los encabezados de sección */
+    color: var(--primary-color); /* Color de los encabezados de sección */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+/* Estilo para el fieldset */
+fieldset {
+    border: 2px solid var(--primary-color); /* Borde del fieldset */
+    padding: 1.5em; /* Padding interno */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    margin-bottom: 1.5em; /* Margen inferior para separar de otros elementos */
+}
+
+/* Estilo para el legend */
+legend {
+    font-family: var(--heading-font); /* Fuente del legend */
+    font-size: 1.2em; /* Tamaño de la fuente del legend */
+    color: var(--primary-color); /* Color del texto del legend */
+    padding: 0 0.5em; /* Padding alrededor del texto del legend */
+}
+
+
+/* Estilo de las etiquetas del formulario */
+form label {
+    display: block; /* Mostrar como bloque */
+    margin-bottom: 0.5em; /* Margen inferior */
+    font-family: var(--heading-font); /* Fuente de las etiquetas */
+    color: var(--primary-color); /* Color de las etiquetas */
+}
+
+/* Estilo de los campos del formulario */
+form input, form textarea, form select, form button {
+    width: 100%; /* Ancho del 100% */
+    padding: 0.75em; /* Padding interno */
+    margin-bottom: 1.5em; /* Margen inferior */
+    border: 1px solid #ccc; /* Borde de los campos */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    font-family: var(--body-font); /* Fuente de los campos */
+    font-size: 1em; /* Tamaño de la fuente de los campos */
+}
+
+/* Efecto de foco en los campos del formulario */
+form input:focus, form textarea:focus, form select:focus {
+    border-color: var(--accent-color); /* Color del borde en foco */
+    outline: none; /* Eliminar outline predeterminado */
+    box-shadow: 0 0 5px var(--accent-color); /* Sombra en foco */
+}
+
+/* Estilo del botón del formulario */
+form button {
+    background: var(--accent-color); /* Color de fondo del botón */
+    color: var(--secondary-color); /* Color del texto del botón */
+    border: none; /* Eliminar borde */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background 0.3s ease; /* Transición de color de fondo */
+}
+
+form button:hover {
+    background: #E65C55; /* Oscurecer el color del botón al pasar el cursor */
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center; /* Alinear el texto al centro */
+    padding: 2em 0; /* Padding superior e inferior */
+    background: var(--primary-color); /* Color de fondo del footer */
+    color: var(--secondary-color); /* Color del texto del footer */
+    width: 100%; /* Ancho del 100% */
+    box-shadow: var(--box-shadow); /* Sombra del footer */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Mostrar los elementos de la lista en bloque */
+        margin: 0.5em 0; /* Márgenes entre los elementos de la lista */
+    }
+
+    main {
+        padding: 1.5em 1em; /* Padding del contenido principal en dispositivos móviles */
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil personal con información, intereses y habilidades.">
+    <meta name="author" content="Tu Nombre">
+    <title>Perfil Personal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header role="banner">
+        <h1>Automation Tester</h1>
+    </header>
+    <nav role="navigation">
+        <ul>
+            <li><a href="#datos-basicos">Datos Básicos</a></li>
+            <li><a href="#biografia">Biografía</a></li>
+            <li><a href="#intereses">Intereses</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a id="editar-perfil-link" href="#editar-perfil">Editar Perfil</a></li>
+        </ul>
+    </nav>
+    <main role="main">
+        <section id="datos-basicos" role="region" aria-labelledby="datos-basicos-title">
+            <h2 id="datos-basicos-title">Datos Básicos</h2>
+            <p><strong>Nombre:</strong> <span id="display-nombre">Javier Castillo</span></p>
+            <p><strong>Correo Electrónico:</strong> <span id="display-email">testjc@example.com</span></p>
+            <p><strong>Fecha de Nacimiento:</strong> <span id="display-fecha-nacimiento">05/04/1993</span></p>
+            <p><strong>Ciudad:</strong> <span id="display-ciudad">Bogotá</span></p>
+        </section>
+        <section id="biografia" role="region" aria-labelledby="biografia-title">
+            <h2 id="biografia-title">Biografía</h2>
+            <p id="display-biografia">
+                Soy Javier Castillo, un apasionado tester automatizador de software con seis años de experiencia en la industria tecnológica. 
+                Estudiante de Ingeniería de Sistemas de 5 semestre en la Universidad CUN, he trabajado en una variedad de proyectos, desde aplicaciones móviles hasta sistemas empresariales complejos, utilizando herramientas y frameworks como Selenium, Appium, JUnit y TestNG.
+
+                Me destaco por mi enfoque meticuloso y detallado, y por mi capacidad para trabajar en equipo y comunicarme eficazmente con todos los stakeholders. 
+                Fuera del trabajo, busco mantenerme actualizado con las últimas tendencias en testing de software.
+            </p>
+        </section>
+        <section id="intereses" role="region" aria-labelledby="intereses-title">
+            <h2 id="intereses-title">Intereses</h2>
+            <p>Como tester automatizador de software, mis intereses se centran en el continuo desarrollo y perfeccionamiento de técnicas de testing para asegurar la máxima calidad de los productos. Disfruto explorando nuevas herramientas y frameworks que faciliten la automatización de pruebas, como Selenium y Appium, y estoy siempre atento a las tendencias emergentes en el campo del testing, como el uso de inteligencia artificial y machine learning para mejorar la eficiencia y efectividad de las pruebas.</p>
+            <p>Además, me interesa profundamente el desarrollo de pruebas de rendimiento y seguridad para garantizar que las aplicaciones no solo funcionen correctamente, sino que también sean rápidas y seguras.</p>
+            <p>En mi tiempo libre, me gusta experimentar con nuevos lenguajes de programación y metodologías ágiles. También disfruto de la lectura de libros y artículos sobre las mejores prácticas en testing y desarrollo de software.</p>
+        </section>
+        <section id="habilidades" role="region" aria-labelledby="habilidades-title">
+            <h2 id="habilidades-title">Habilidades</h2>
+            <p><strong>Lenguajes de Programación:</strong> Profundo conocimiento en lenguajes como Python, JavaScript, y C#.</p>
+            <p><strong>Frameworks de Pruebas:</strong> Experiencia con frameworks como Selenium, Appium, JUnit, TestNG, Cucumber, y Cypress.</p>
+            <p><strong>Herramientas de Automatización:</strong> Uso experto de herramientas como Jenkins, Git, Maven, Gradle, y Docker para integración y entrega continua (CI/CD).</p>
+            <p><strong>Testing de APIs:</strong> Competencia en herramientas como Postman y SoapUI para pruebas automatizadas de APIs.</p>
+            <p><strong>Testing de Rendimiento:</strong> Experiencia con herramientas como JMeter para pruebas de rendimiento y carga.</p>
+            <p><strong>Version Control:</strong> Uso eficiente de sistemas de control de versiones como Git y GitHub.</p>
+        </section>
+        
+        <section id="editar-perfil" role="region" aria-labelledby="editar-perfil-title" style="display: none;">
+            <h2 id="editar-perfil-title">Editar Perfil</h2>
+            <form id="profile-form">
+                <fieldset>
+                    <legend>Información Personal</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" min="1900-01-01" max="2023-12-31" required>
+
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" required>
+
+                    <label for="biografia">Biografía:</label>
+                    <textarea id="biografia" name="biografia" rows="4" cols="50"></textarea>
+                </fieldset>
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2024 Perfil Personal. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
